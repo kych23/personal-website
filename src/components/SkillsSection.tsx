@@ -3,7 +3,7 @@ import { skills } from "@/lib/data";
 import { motion } from "framer-motion";
 import MotionWrapper from "./MotionWrapper";
 import { GlassCard } from "./ui/glass-card";
-import { Wrench, Code, Palette, Settings, Database, Cloud } from "lucide-react";
+import { Wrench, Code, Palette, Settings, Database, Cloud, Wrench as Tools } from "lucide-react";
 
 function SkillTag({ skill, index }: { skill: string; index: number }) {
   return (
@@ -54,7 +54,16 @@ export default function SkillsSection() {
       <div className="container max-w-4xl mx-auto px-6 md:px-4">
         <MotionWrapper>
           <h2 className="text-2xl font-bold mb-8 text-center md:text-left flex items-center">
-            <Wrench className="w-6 h-6 mr-2 text-purple-500" />
+            <motion.span
+              className="mr-2"
+              whileHover={{ 
+                scale: 1.1, 
+                rotate: [0, 15, -15, 10, -10, 0],
+                transition: { duration: 0.4 }
+              }}
+            >
+              <Wrench className="w-6 h-6 text-purple-500" />
+            </motion.span>
             Skills
           </h2>
         </MotionWrapper>
@@ -82,10 +91,10 @@ export default function SkillsSection() {
           <motion.div variants={skillCategoryVariants}>
             <GlassCard className="p-4">
               <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
-                <Palette className="w-5 h-5 mr-2 text-purple-500" /> Frontend Development
+                <Palette className="w-5 h-5 mr-2 text-purple-500" /> Frameworks & Tools
               </h3>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {skills.frontendDevelopment.map((skill, index) => (
+                {skills.frameworksAndTools.map((skill, index) => (
                   <SkillTag key={skill} skill={skill} index={index} />
                 ))}
               </div>
@@ -95,10 +104,10 @@ export default function SkillsSection() {
           <motion.div variants={skillCategoryVariants}>
             <GlassCard className="p-4">
               <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
-                <Settings className="w-5 h-5 mr-2 text-purple-500" /> Backend Development
+                <Settings className="w-5 h-5 mr-2 text-purple-500" /> Libraries & APIs
               </h3>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {skills.backendDevelopment.map((skill, index) => (
+                {skills.librariesAndAPIs.map((skill, index) => (
                   <SkillTag key={skill} skill={skill} index={index} />
                 ))}
               </div>
@@ -111,38 +120,13 @@ export default function SkillsSection() {
                 <Database className="w-5 h-5 mr-2 text-purple-500" /> Database & Storage
               </h3>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {skills.databaseAndStorage.map((skill, index) => (
+                {skills.databasesAndStorage.map((skill, index) => (
                   <SkillTag key={skill} skill={skill} index={index} />
                 ))}
               </div>
             </GlassCard>
           </motion.div>
 
-          <motion.div variants={skillCategoryVariants}>
-            <GlassCard className="p-4">
-              <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
-                <Cloud className="w-5 h-5 mr-2 text-purple-500" /> Cloud & DevOps
-              </h3>
-              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {skills.cloudAndDevOps.map((skill, index) => (
-                  <SkillTag key={skill} skill={skill} index={index} />
-                ))}
-              </div>
-            </GlassCard>
-          </motion.div>
-
-          <motion.div variants={skillCategoryVariants}>
-            <GlassCard className="p-4">
-              <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
-                <span className="mr-2 text-xl">🧰</span> Tools & Services
-              </h3>
-              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {skills.toolsAndServices.map((skill, index) => (
-                  <SkillTag key={skill} skill={skill} index={index} />
-                ))}
-              </div>
-            </GlassCard>
-          </motion.div>
         </motion.div>
       </div>
     </section>

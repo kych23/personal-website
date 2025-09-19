@@ -18,7 +18,17 @@ export default function ProjectsSection() {
       <div className="container max-w-4xl mx-auto px-6 md:px-4">
         <MotionWrapper>
           <h2 className="text-2xl font-bold mb-8 text-center md:text-left flex items-center">
-            <Rocket className="w-6 h-6 mr-2 text-purple-500" />
+            <motion.span
+              className="mr-2"
+              whileHover={{ 
+                scale: 1.1, 
+                rotate: [0, -10, 10, 0],
+                y: [-2, 2, -1, 1, 0],
+                transition: { duration: 0.4 }
+              }}
+            >
+              <Rocket className="w-6 h-6 text-purple-500" />
+            </motion.span>
             Projects
           </h2>
         </MotionWrapper>

@@ -1,6 +1,6 @@
 import { workExperience } from "@/lib/data";
 import TimelineItem from "./TimelineItem";
-import { Briefcase, Work } from "lucide-react";
+import { Briefcase } from "lucide-react";
 import { motion } from "framer-motion";
 import MotionWrapper from "./MotionWrapper";
 
@@ -19,8 +19,13 @@ export default function ExperienceSection() {
               whileInView={{ rotate: [0, -10, 10, -5, 5, 0] }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
+              whileHover={{ 
+                scale: 1.1, 
+                rotate: [0, -15, 15, -10, 10, 0],
+                transition: { duration: 0.4 }
+              }}
             >
-              <Work className="w-6 h-6 text-purple-500" />
+              <Briefcase className="w-6 h-6 text-purple-500" />
             </motion.span>
             Technical Experience
           </h2>

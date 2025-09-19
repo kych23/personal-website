@@ -44,14 +44,25 @@ export const education = [
     minor: "Minor in Artificial Intelligence",
     period: "Aug 2023 - Expected May 2027",
     achievements: [
-      "Relevant Coursework: Data Structures, Algorithms Analysis, Machine Learning, Artificial Intelligence, Systems Programming, Computer Vision, Computer Networks, Robotics",
-      "Pi Delta Psi Fraternity Web Developer",
-      "Cornell iGem Member",
-      "Cornell University Sustainable Design",
+      "Pi Delta Psi Fraternity",
+      "Cornell iGe",
       "Cornell Chinese Student Association",
       "Cornell Korean American Student Association",
     ],
   },
+];
+
+export const coursework = [
+  "Data Structures",
+  "Algorithms Analysis",
+  "Operating Systems",
+  "Systems Programming",
+  "Computer Networks",
+  "Text Mining",  
+  "Machine Learning",
+  "Artificial Intelligence",
+  "Computer Vision",
+  "Robotics",
 ];
 export const skills = {
   programmingLanguages: [
@@ -71,8 +82,10 @@ export const skills = {
     "FastAPI",
     "Tailwind CSS",
     "Docker",
-    "AWS S3",
+    "AWS",
     "GCP",
+    "Astro",
+    "Render",
     "Vercel",
   ],
   databasesAndStorage: [
