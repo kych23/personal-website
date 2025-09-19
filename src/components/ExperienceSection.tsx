@@ -1,6 +1,6 @@
 import { workExperience } from "@/lib/data";
 import TimelineItem from "./TimelineItem";
-import { Briefcase } from "lucide-react";
+import { Briefcase, Work } from "lucide-react";
 import { motion } from "framer-motion";
 import MotionWrapper from "./MotionWrapper";
 
@@ -20,18 +20,19 @@ export default function ExperienceSection() {
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              💼
-            </motion.span>{" "}
-            Work Experience
+              <Work className="w-6 h-6 text-purple-500" />
+            </motion.span>
+            Technical Experience
           </h2>
         </MotionWrapper>
         <div className="mb-8">
           {workExperience.map((job, index) => (
             <TimelineItem
               key={job.company + job.period}
-              title={`👨‍💻 ${job.position} | ${job.company}`}
-              subtitle={`🌍 ${job.location}`}
-              date={`📅 ${job.period}`}
+              title={job.position}
+              subtitle={job.company}
+              date={job.period}
+              location={job.location}
               isLast={index === workExperience.length - 1}
               index={index}
             >

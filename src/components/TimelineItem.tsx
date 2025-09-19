@@ -1,11 +1,14 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { Building2, Calendar, GraduationCap, MapPin } from "lucide-react";
 
 interface TimelineItemProps {
   title: string;
   subtitle: string;
+  subtitle2?: string;
   date: string;
+  location?: string;
   isLast?: boolean;
   index?: number;
   children?: React.ReactNode;
@@ -14,7 +17,9 @@ interface TimelineItemProps {
 export default function TimelineItem({
   title,
   subtitle,
+  subtitle2,
   date,
+  location,
   isLast = false,
   index = 0,
   children,
@@ -58,9 +63,27 @@ export default function TimelineItem({
           transition={{ duration: 0.5, delay: index * 0.2 + 0.1 }}
           viewport={{ once: true, margin: "-50px" }}
         >
-          <h3 className="font-medium">{title}</h3>
-          <p className="text-sm text-muted-foreground">{subtitle}</p>
-          <p className="text-xs text-muted-foreground/70 mb-2">{date}</p>
+          <h3 className="font-medium text-base mb-1">{title}</h3>
+          {subtitle2 && (
+            <div className="flex items-center text-sm text-muted-foreground mb-1">
+              <GraduationCap className="w-4 h-4 mr-2 text-purple-500" />
+              <span className="font-medium">{subtitle2}</span>
+            </div>
+          )}
+          <div className="flex items-center text-sm text-muted-foreground mb-1">
+            <Building2 className="w-4 h-4 mr-2 text-purple-500" />
+            <span>{subtitle}</span>
+          </div>
+          {location && (
+            <div className="flex items-center text-sm text-muted-foreground mb-1">
+              <MapPin className="w-4 h-4 mr-2 text-purple-500" />
+              <span>{location}</span>
+            </div>
+          )}
+          <div className="flex items-center text-sm text-muted-foreground mb-2">
+            <Calendar className="w-4 h-4 mr-2 text-purple-500" />
+            <span>{date}</span>
+          </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
