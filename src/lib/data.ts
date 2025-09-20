@@ -198,6 +198,8 @@ export const skills = {
     "PostgreSQL",
     "MongoDB",
     "Redis",
+    "AWS S3",
+    "Google Cloud Storage",
   ],
   librariesAndAPIs: [
     "PyTorch",

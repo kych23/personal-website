@@ -84,4 +84,10 @@ const { title = "Kyle Chu • Software Engineer", description = "My Portfolio" }
       background-color var(--transition-standard),
       color var(--transition-standard);
   }
+
+  /* Optimize font loading to prevent CLS */
+  .font-sans {
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-display: swap;
+  }
 </style>

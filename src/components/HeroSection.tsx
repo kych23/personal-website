@@ -122,6 +122,8 @@ export default function HeroSection() {
               <img
                 src={personalInfo.profilePicture}
                 alt="Profile"
+                width={240}
+                height={240}
                 className="w-48 md:w-60 rounded-full relative ring-2 ring-purple-500/50"
                 style={{ objectFit: "cover" }}
               />
