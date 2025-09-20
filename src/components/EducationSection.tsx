@@ -27,7 +27,7 @@ function CourseworkTag({
       }}
       whileHover={{ scale: 1.05, y: -2 }}
       onClick={(e) => onClick(courseworkItem, e)}
-      className="px-3 py-2 bg-background/60 backdrop-blur-sm rounded-lg text-xs border border-purple-500/20 shadow-sm hover:border-purple-500/40 transition-all duration-300 cursor-pointer whitespace-nowrap"
+      className="px-3 py-2 bg-background/60 backdrop-blur-sm rounded-lg text-[13px] font-medium border border-purple-500/20 shadow-sm hover:border-purple-500/40 transition-all duration-300 cursor-pointer whitespace-nowrap"
     >
       {courseworkItem.short_name}
     </motion.div>

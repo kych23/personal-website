@@ -3,7 +3,7 @@ import { skills } from "@/lib/data";
 import { motion } from "framer-motion";
 import MotionWrapper from "./MotionWrapper";
 import { GlassCard } from "./ui/glass-card";
-import { Wrench, Code, Palette, Settings, Database, Cloud, Wrench as Tools } from "lucide-react";
+import { Wrench, Code, Palette, Database, Cloud, Brain, Server } from "lucide-react";
 
 function SkillTag({ skill, index }: { skill: string; index: number }) {
   return (
@@ -78,10 +78,10 @@ export default function SkillsSection() {
           <motion.div variants={skillCategoryVariants}>
             <GlassCard className="p-4">
               <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
-                <Code className="w-5 h-5 mr-2 text-purple-500" /> Programming Languages
+                <Code className="w-5 h-5 mr-2 text-purple-500" /> Core Languages
               </h3>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {skills.programmingLanguages.map((skill, index) => (
+                {skills.coreLanguages.map((skill, index) => (
                   <SkillTag key={skill} skill={skill} index={index} />
                 ))}
               </div>
@@ -91,10 +91,10 @@ export default function SkillsSection() {
           <motion.div variants={skillCategoryVariants}>
             <GlassCard className="p-4">
               <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
-                <Palette className="w-5 h-5 mr-2 text-purple-500" /> Frameworks & Tools
+                <Palette className="w-5 h-5 mr-2 text-purple-500" /> Frontend Development
               </h3>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {skills.frameworksAndTools.map((skill, index) => (
+                {skills.frontendDevelopment.map((skill, index) => (
                   <SkillTag key={skill} skill={skill} index={index} />
                 ))}
               </div>
@@ -104,10 +104,23 @@ export default function SkillsSection() {
           <motion.div variants={skillCategoryVariants}>
             <GlassCard className="p-4">
               <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
-                <Settings className="w-5 h-5 mr-2 text-purple-500" /> Libraries & APIs
+                <Server className="w-5 h-5 mr-2 text-purple-500" /> Backend Development
               </h3>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                {skills.librariesAndAPIs.map((skill, index) => (
+                {skills.backendDevelopment.map((skill, index) => (
+                  <SkillTag key={skill} skill={skill} index={index} />
+                ))}
+              </div>
+            </GlassCard>
+          </motion.div>
+
+          <motion.div variants={skillCategoryVariants}>
+            <GlassCard className="p-4">
+              <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
+                <Cloud className="w-5 h-5 mr-2 text-purple-500" /> Cloud & DevOps
+              </h3>
+              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                {skills.cloudAndDevOps.map((skill, index) => (
                   <SkillTag key={skill} skill={skill} index={index} />
                 ))}
               </div>
@@ -121,6 +134,19 @@ export default function SkillsSection() {
               </h3>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                 {skills.databasesAndStorage.map((skill, index) => (
+                  <SkillTag key={skill} skill={skill} index={index} />
+                ))}
+              </div>
+            </GlassCard>
+          </motion.div>
+
+          <motion.div variants={skillCategoryVariants}>
+            <GlassCard className="p-4">
+              <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
+                <Brain className="w-5 h-5 mr-2 text-purple-500" /> AI & Data Science
+              </h3>
+              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                {skills.aiAndDataScience.map((skill, index) => (
                   <SkillTag key={skill} skill={skill} index={index} />
                 ))}
               </div>

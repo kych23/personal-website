@@ -171,28 +171,37 @@ export const coursework = [
   }
 ];
 export const skills = {
-  programmingLanguages: [
+  coreLanguages: [
+    "JavaScript",
+    "TypeScript", 
     "Python",
     "Java",
-    "JavaScript/TypeScript",
-    "C",
     "SQL",
-    "OCaml",
     "HTML/CSS",
+    "C",
+    "OCaml",
   ],
-  frameworksAndTools: [
+  frontendDevelopment: [
     "React.js",
     "Next.js",
-    "Node.js/Express.js",
-    "Flask",
-    "FastAPI",
-    "Tailwind CSS",
-    "Docker",
-    "AWS",
-    "GCP",
     "Astro",
-    "Render",
+    "Tailwind CSS",
+    "React Redux",
+    "ReactFlow",
+  ],
+  backendDevelopment: [
+    "Node.js/Express.js",
+    "FastAPI",
+    "Flask",
+    "Pydantic",
+  ],
+  cloudAndDevOps: [
+    "AWS",
+    "GCP", 
+    "Docker",
     "Vercel",
+    "Render",
+    "Git"
   ],
   databasesAndStorage: [
     "PostgreSQL",
@@ -200,23 +209,20 @@ export const skills = {
     "Redis",
     "AWS S3",
     "Google Cloud Storage",
+    "SQLite",
   ],
-  librariesAndAPIs: [
+  aiAndDataScience: [
+    "NumPy",
     "PyTorch",
     "Scikit-learn",
     "LangChain",
-    "NumPy",
-    "Pydantic",
-    "React Redux",
-    "ReactFlow",
-    "PyMuPDF/PyPDF",
   ],
 };
 
 export const projects = [
   {
     title: "Syllaparse",
-    github: "https://github.com/kych23/syllaparse",
+    github: "https://github.com/khoanguyentran/syllaparse",
     description: [
       "Built and deployed a full-stack web platform used by over 100 students that automatically extracts lecture schedules and exam dates from PDFs by leveraging OpenAI GPT-5 and PyMuPDF for text extraction.",
       "Designed and implemented a PostgreSQL database with Redis caching and Google Cloud Storage, enabling efficient data management and faster query performance.",

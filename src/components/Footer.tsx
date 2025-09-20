@@ -1,6 +1,6 @@
 import { personalInfo } from "@/lib/data";
 import { motion } from "framer-motion";
-import { Code, Sparkles, Github, Linkedin, Mail, Instagram, Facebook } from "lucide-react";
+import { Code, Github, Linkedin, Mail, Instagram, Facebook } from "lucide-react";
 
 export default function Footer() {
   return (
