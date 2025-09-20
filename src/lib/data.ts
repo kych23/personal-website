@@ -223,28 +223,45 @@ export const projects = [
   {
     title: "Syllaparse",
     github: "https://github.com/khoanguyentran/syllaparse",
-    description: [
-      "Built and deployed a full-stack web platform used by over 100 students that automatically extracts lecture schedules and exam dates from PDFs by leveraging OpenAI GPT-5 and PyMuPDF for text extraction.",
-      "Designed and implemented a PostgreSQL database with Redis caching and Google Cloud Storage, enabling efficient data management and faster query performance.",
-      "Reduced manual calendar event entry times by 92% through Google Authentication and Calendar API integration, streamlining academic planning for students.",
+    description: "A full-stack web platform that automatically extracts lecture schedules and exam dates from PDF syllabi, streamlining academic planning for students.",
+    technologies: ["React.js", "Node.js", "PostgreSQL", "Redis", "OpenAI API", "PyMuPDF", "Google Cloud Storage", "Google Calendar/OAuth API"],
+    achievements: [
+      "Used by over 100 students across multiple universities",
+      "Reduced manual calendar entry time by 92%",
+      "Implemented efficient caching with Redis for faster query performance"
     ],
   },
   {
     title: "Sentiment Text Analysis",
-    github: "https://github.com/kych23/sentiment-analysis",
-    description: [
-      "Created a multi-class text classifier to predict 28 emotions, processing 15,000 samples to build a robust dataset using Python and Scikit-learn.",
-      "Engineered feature extraction pipeline with lemmatization, stopword removal, and TF-IDF vectorization to improve model generalization.",
-      "Implemented a stacked classifier combining ridge regression and neural networks to boost prediction accuracy by 74%.",
+    github: "https://github.com/kych23/sentiment-text-analysis",
+    description: "A multi-class text classifier that predicts 28 different emotions from text input, built using advanced machine learning techniques.",
+    technologies: ["Python", "Scikit-learn", "NumPy", "Pandas"],
+    achievements: [
+      "Processed 15,000+ text samples to build robust dataset",
+      "Boosted prediction accuracy by 74% using stacked classifiers",
+      "Engineered feature extraction pipeline with lemmatization and stopword removal"
+    ],
+  },
+  {
+    title: "CUDorms",
+    github: "https://github.com/aliu04/CUDorms",
+    description: "A full-stack web application for Cornell students to learn more about the dorms and its amenities on campus with a blog section",
+    technologies: ["React.js", "MongoDB", "Node.js", "Express.js"],
+    achievements: [
+      "Architected scalable backend database and REST APIs",
+      "Integrated automated email notifications with SendGrid",
+      "Containerized and deployed production-ready backend on GCP"
     ],
   },
   {
     title: "Latte Link",
-    github: "https://github.com/kych23/latte-link",
-    description: [
-      "Architected a scalable backend database and REST APIs for user data management using SQLite and Python.",
-      "Integrated SendGrid email API to enable automated user communications and notifications.",
-      "Containerized and deployed on Google Cloud Platform with Docker, delivering a production-ready backend.",
+    github: "https://github.com/kych23/FA23-Cornell-AppDev-Hack-Challenge",
+    description: "A mobile app that allows Cornell students to schedule coffee chats with all Cornell clubs that supports calendar events, messaging, and email notifications.",
+    technologies: ["Python", "SQLite", "SendGrid API", "Docker", "Google Cloud Platform", "Flask"],
+    achievements: [
+      "Won top placement in Cornell AppDev Hack Challenge",
+      "Built scalable user data management system",
+      "Implemented automated user communication features"
     ],
   },
 ];
