@@ -44,7 +44,7 @@ export default function HeroSection() {
             </motion.h1>
 
             <motion.p
-              className="text-xl text-muted-foreground animate-pulse mb-6"
+              className="text-xl text-muted-foreground animate-pulse-5s mb-6"
               variants={childVariants}
             >
               CS @ Cornell University

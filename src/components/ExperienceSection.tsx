@@ -38,6 +38,7 @@ export default function ExperienceSection() {
               subtitle={job.company}
               date={job.period}
               location={job.location}
+              projectLink={job.projectLink}
               isLast={index === workExperience.length - 1}
               index={index}
             >

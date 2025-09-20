@@ -27,7 +27,7 @@ function CourseworkTag({
       }}
       whileHover={{ scale: 1.05, y: -2 }}
       onClick={(e) => onClick(courseworkItem, e)}
-      className="px-3 py-2 bg-background/60 backdrop-blur-sm rounded-lg text-[13px] font-medium border border-purple-500/20 shadow-sm hover:border-purple-500/40 transition-all duration-300 cursor-pointer whitespace-nowrap"
+      className="px-3 py-2 bg-background/60 backdrop-blur-sm rounded-lg text-[12px] sm:text-[13px] font-medium border border-purple-500/20 shadow-sm hover:border-purple-500/40 transition-all duration-300 cursor-pointer text-center whitespace-nowrap flex-shrink-0"
     >
       {courseworkItem.short_name}
     </motion.div>
@@ -169,7 +169,7 @@ export default function EducationSection() {
                 </div>
                 <h3 className="text-lg font-medium">Relevant Coursework</h3>
               </div>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="flex flex-wrap gap-3">
                 {coursework.map((courseworkItem, index) => (
                   <CourseworkTag 
                     key={courseworkItem.short_name || index} 

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { Building2, Calendar, GraduationCap, MapPin } from "lucide-react";
+import { Building2, Calendar, GraduationCap, MapPin, ExternalLink } from "lucide-react";
 
 interface TimelineItemProps {
   title: string;
@@ -9,6 +9,7 @@ interface TimelineItemProps {
   subtitle2?: string;
   date: string;
   location?: string;
+  projectLink?: string;
   isLast?: boolean;
   index?: number;
   children?: React.ReactNode;
@@ -20,6 +21,7 @@ export default function TimelineItem({
   subtitle2,
   date,
   location,
+  projectLink,
   isLast = false,
   index = 0,
   children,
@@ -72,7 +74,20 @@ export default function TimelineItem({
           )}
           <div className="flex items-center text-sm text-muted-foreground mb-1">
             <Building2 className="w-4 h-4 mr-2 text-purple-500" />
-            <span>{subtitle}</span>
+            {projectLink ? (
+              <motion.a
+                href={projectLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-purple-500 hover:text-purple-400 transition-colors duration-200 flex items-center group"
+                whileHover={{ scale: 1.02 }}
+              >
+                <span className="group-hover:underline">{subtitle}</span>
+                <ExternalLink className="w-3 h-3 ml-1 opacity-60 group-hover:opacity-100 transition-opacity" />
+              </motion.a>
+            ) : (
+              <span>{subtitle}</span>
+            )}
           </div>
           {location && (
             <div className="flex items-center text-sm text-muted-foreground mb-1">

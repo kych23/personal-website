@@ -9,7 +9,7 @@ export const personalInfo = {
   profilePicture: "/profile.png",
   resume: "/Kyle_Chu_Resume.pdf",
   heroDescription:
-    "Computer Science student at Cornell University with a passion for AI engineering and software development. I specialize in building scalable web applications and AI-powered solutions that solve real-world problems. With experience in both startup environments and academic research, I bring a unique blend of technical expertise and innovative thinking to every project.",
+    "Hi! I'm Kyle, a Computer Science student at Cornell University who loves tackling challenging problems through innovative solutions. I'm passionate about building software that makes a real difference in people's lives, whether it's streamlining workflows or solving everyday problems. I enjoy the challenge of solving complex problems and learning new technologies along the way. With hands-on experience in full-stack development and AI engineering, I'm excited to bring my curiosity, creativity, and collaborative spirit to meaningful projects where I can continue growing as a software engineer.",
 };
 
 export const workExperience = [
@@ -29,6 +29,7 @@ export const workExperience = [
     location: "Ithaca, NY",
     position: "Frontend Developer",
     period: "March 2024 - Present",
+    projectLink: "https://www.cornellpdp.com/",
     achievements: [
       "Launched a web platform to streamline updates and boost alumni engagement, increasing viewership by 200% and raising $4,000 using React.js and TypeScript",
       "Optimized site performance and SEO to improve traffic by 85% through Next.js and efficient asset management",
@@ -40,10 +41,11 @@ export const workExperience = [
     location: "Ithaca, NY",
     position: "Frontend Developer",
     period: "October 2023 - May 2025",
+    projectLink: "https://2024.igem.wiki/cornell/",
     achievements: [
-      "Designed and implemented the competition website using Figma, HTML, and CSS",
-      "Integrated SendGrid email API to enable automated user communications and notifications.",
-      "Containerized and deployed on Google Cloud Platform with Docker, delivering a production-ready backend.",
+      "Implemented the Oncurex website for the Cornell iGEM team using Figma, HTML, CSS, and JavaScript",
+      "Built an interactive educational fruit-ninja game with custom images and animations using JavaScript and p5.js",
+      "Won gold medal and was nominated for \"Best Presentation\" at iGem Jamboree 2024, representing Cornell University in an international competition with over 75,000 participants and 460 teams",
     ],
   }
 ];
@@ -224,7 +226,7 @@ export const projects = [
     title: "Syllaparse",
     github: "https://github.com/khoanguyentran/syllaparse",
     description: "A full-stack web platform that automatically extracts lecture schedules and exam dates from PDF syllabi, streamlining academic planning for students.",
-    technologies: ["React.js", "Node.js", "PostgreSQL", "Redis", "OpenAI API", "PyMuPDF", "Google Cloud Storage", "Google Calendar/OAuth API"],
+    technologies: ["React.js", "Next.js", "PostgreSQL", "Redis", "OpenAI API", "PyMuPDF", "Google Cloud Storage", "Google Calendar/OAuth API"],
     achievements: [
       "Used by over 100 students across multiple universities",
       "Reduced manual calendar entry time by 92%",
@@ -248,20 +250,22 @@ export const projects = [
     description: "A full-stack web application for Cornell students to learn more about the dorms and its amenities on campus with a blog section",
     technologies: ["React.js", "MongoDB", "Node.js", "Express.js"],
     achievements: [
-      "Architected scalable backend database and REST APIs",
-      "Integrated automated email notifications with SendGrid",
-      "Containerized and deployed production-ready backend on GCP"
+      "Built full-stack MERN application with real-time data updates",
+      "Implemented state management with React Redux for responsive UI",
+      "Developed JWT authentication for secure user data"
     ],
   },
+  
+
   {
     title: "Latte Link",
     github: "https://github.com/kych23/FA23-Cornell-AppDev-Hack-Challenge",
     description: "A mobile app that allows Cornell students to schedule coffee chats with all Cornell clubs that supports calendar events, messaging, and email notifications.",
     technologies: ["Python", "SQLite", "SendGrid API", "Docker", "Google Cloud Platform", "Flask"],
     achievements: [
-      "Won top placement in Cornell AppDev Hack Challenge",
-      "Built scalable user data management system",
-      "Implemented automated user communication features"
+      "Architected scalable backend with SQLite and REST APIs",
+      "Integrated SendGrid API for automated notifications",
+      "Containerized and deployed production backend with Docker and Google Cloud Platform"
     ],
   },
 ];
