@@ -4,7 +4,7 @@ import { Award, GraduationCap, MapPin, Calendar, Building2, BookOpen } from "luc
 import MotionWrapper from "./MotionWrapper";
 import { motion } from "framer-motion";
 import CoursePopup from "./ui/course-popup";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 function CourseworkTag({ 
   courseworkItem, 
@@ -38,9 +38,13 @@ export default function EducationSection() {
   const [selectedCourse, setSelectedCourse] = useState<{ number: string; title: string; description: string } | null>(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [popupPosition, setPopupPosition] = useState({ x: 0, y: 0 });
+  const clickedElementRef = useRef<HTMLElement | null>(null);
 
   const handleCourseClick = (courseworkItem: { short_name: string; course: { number: string; title: string; description: string } }, event: React.MouseEvent) => {
-    const rect = event.currentTarget.getBoundingClientRect();
+    const element = event.currentTarget as HTMLElement;
+    clickedElementRef.current = element;
+    
+    const rect = element.getBoundingClientRect();
     setPopupPosition({
       x: rect.left + rect.width / 2,
       y: rect.top
@@ -52,7 +56,31 @@ export default function EducationSection() {
   const handleClosePopup = () => {
     setIsPopupOpen(false);
     setSelectedCourse(null);
+    clickedElementRef.current = null;
   };
+
+  // Update popup position on scroll
+  useEffect(() => {
+    const updatePosition = () => {
+      if (clickedElementRef.current && isPopupOpen) {
+        const rect = clickedElementRef.current.getBoundingClientRect();
+        setPopupPosition({
+          x: rect.left + rect.width / 2,
+          y: rect.top
+        });
+      }
+    };
+
+    if (isPopupOpen) {
+      window.addEventListener('scroll', updatePosition, true);
+      window.addEventListener('resize', updatePosition);
+    }
+
+    return () => {
+      window.removeEventListener('scroll', updatePosition, true);
+      window.removeEventListener('resize', updatePosition);
+    };
+  }, [isPopupOpen]);
 
   return (
     <section

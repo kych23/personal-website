@@ -44,6 +44,18 @@ export default function GlassHeader() {
               </motion.a>
             )
           )}
+          <motion.a
+            href={personalInfo.resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-all duration-300 hover:text-foreground text-foreground/70 hover:scale-105 px-3 py-2 rounded-full hover:bg-background/20 bg-purple-500/10 hover:bg-purple-500/20"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.2, delay: 0.4 }}
+            whileHover={{ y: -2 }}
+          >
+            Resume
+          </motion.a>
         </nav>
 
         <div className="flex items-center space-x-3">
@@ -87,6 +99,18 @@ export default function GlassHeader() {
                   </motion.a>
                 )
               )}
+              <motion.a
+                href={personalInfo.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-all duration-300 hover:text-foreground text-foreground/70 hover:bg-background/20 px-4 py-3 rounded-xl bg-purple-500/10 hover:bg-purple-500/20"
+                onClick={toggleMenu}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.2, delay: 0.2 }}
+              >
+                Resume
+              </motion.a>
             </nav>
           </motion.div>
         )}

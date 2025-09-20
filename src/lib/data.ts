@@ -7,6 +7,7 @@ export const personalInfo = {
   instagram: "https://www.instagram.com/kych2204/",
   facebook: "https://www.facebook.com/kyle.chu.506698/",
   profilePicture: "/profile.png",
+  resume: "/Kyle_Chu_Resume.pdf",
   heroDescription:
     "Computer Science student at Cornell University with a passion for AI engineering and software development. I specialize in building scalable web applications and AI-powered solutions that solve real-world problems. With experience in both startup environments and academic research, I bring a unique blend of technical expertise and innovative thinking to every project.",
 };
