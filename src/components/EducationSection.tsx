@@ -3,8 +3,18 @@ import TimelineItem from "./TimelineItem";
 import { Award, GraduationCap, MapPin, Calendar, Building2, BookOpen } from "lucide-react";
 import MotionWrapper from "./MotionWrapper";
 import { motion } from "framer-motion";
+import CoursePopup from "./ui/course-popup";
+import { useState } from "react";
 
-function CourseworkTag({ course, index }: { course: string; index: number }) {
+function CourseworkTag({ 
+  courseworkItem, 
+  index, 
+  onClick 
+}: { 
+  courseworkItem: { short_name: string; course: { number: string; title: string; description: string } }; 
+  index: number;
+  onClick: (courseworkItem: { short_name: string; course: { number: string; title: string; description: string } }, event: React.MouseEvent) => void;
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
@@ -16,18 +26,38 @@ function CourseworkTag({ course, index }: { course: string; index: number }) {
         delay: 0.05 * index,
       }}
       whileHover={{ scale: 1.05, y: -2 }}
-      className="px-3 py-1 bg-background/60 backdrop-blur-sm rounded-lg text-sm border border-purple-500/20 shadow-sm hover:border-purple-500/40 transition-all duration-300"
+      onClick={(e) => onClick(courseworkItem, e)}
+      className="px-3 py-2 bg-background/60 backdrop-blur-sm rounded-lg text-xs border border-purple-500/20 shadow-sm hover:border-purple-500/40 transition-all duration-300 cursor-pointer whitespace-nowrap"
     >
-      {course}
+      {courseworkItem.short_name}
     </motion.div>
   );
 }
 
 export default function EducationSection() {
+  const [selectedCourse, setSelectedCourse] = useState<{ number: string; title: string; description: string } | null>(null);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [popupPosition, setPopupPosition] = useState({ x: 0, y: 0 });
+
+  const handleCourseClick = (courseworkItem: { short_name: string; course: { number: string; title: string; description: string } }, event: React.MouseEvent) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    setPopupPosition({
+      x: rect.left + rect.width / 2,
+      y: rect.top
+    });
+    setSelectedCourse(courseworkItem.course);
+    setIsPopupOpen(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+    setSelectedCourse(null);
+  };
+
   return (
     <section
       id="education"
-      className="py-12 bg-gradient-to-b from-muted/10 to-background"
+      className="py-12 bg-gradient-to-b from-muted/30 to-background dark:from-muted/10"
     >
       <div className="container max-w-4xl mx-auto px-6 md:px-4">
         <MotionWrapper>
@@ -60,7 +90,7 @@ export default function EducationSection() {
                 isLast={index === education.length - 1}
                 index={index}
               >
-                {edu.achievements && edu.achievements.length > 0 && (
+                {edu.activities && edu.activities.length > 0 && (
                   <motion.div
                     className="mt-3 p-4 bg-background/80 backdrop-blur-sm backdrop-filter rounded-lg border border-purple-500/20 dark:bg-card/10 dark:border-purple-500/10 shadow-sm"
                     initial={{ opacity: 0, y: 20 }}
@@ -77,7 +107,7 @@ export default function EducationSection() {
                       </h4>
                     </div>
                     <ul className="list-none ml-4 space-y-2 text-sm">
-                      {edu.achievements.map((achievement, i) => (
+                      {edu.activities.map((activity, i) => (
                         <motion.li
                           key={i}
                           className="text-muted-foreground relative pl-6"
@@ -86,7 +116,7 @@ export default function EducationSection() {
                           transition={{ duration: 0.3, delay: 0.1 * i }}
                           viewport={{ once: true }}
                         >
-                          {achievement}
+                          {activity}
                         </motion.li>
                       ))}
                     </ul>
@@ -111,15 +141,30 @@ export default function EducationSection() {
                 </div>
                 <h3 className="text-lg font-medium">Relevant Coursework</h3>
               </div>
-              <div className="grid grid-cols-2 gap-2">
-                {coursework.map((course, index) => (
-                  <CourseworkTag key={course} course={course} index={index} />
+              <div className="grid grid-cols-2 gap-3">
+                {coursework.map((courseworkItem, index) => (
+                  <CourseworkTag 
+                    key={courseworkItem.short_name || index} 
+                    courseworkItem={courseworkItem} 
+                    index={index} 
+                    onClick={handleCourseClick}
+                  />
                 ))}
               </div>
             </div>
           </motion.div>
         </div>
       </div>
+
+      {/* Course Description Popup */}
+      <CoursePopup
+        isOpen={isPopupOpen}
+        onClose={handleClosePopup}
+        title={selectedCourse?.title || ""}
+        description={selectedCourse?.description || ""}
+        courseNumber={selectedCourse?.number}
+        position={popupPosition}
+      />
     </section>
   );
 }
