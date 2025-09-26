@@ -1,5 +1,5 @@
 import { personalInfo } from "@/lib/data";
-import { Mail, Github, MapPin, Linkedin, Download } from "lucide-react";
+import { Mail, Github, MapPin, Linkedin, Download, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import MotionWrapper from "./MotionWrapper";
 
@@ -71,6 +71,16 @@ export default function HeroSection() {
               >
                 <Mail className="h-4 w-4 mr-2" />
                 {personalInfo.email}
+              </motion.a>
+
+              <motion.a
+                href={`tel:${personalInfo.phone}`}
+                className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+                variants={childVariants}
+                whileHover={{ scale: 1.05, color: "#4b5563" }}
+              >
+                <Phone className="h-4 w-4 mr-2" />
+                {personalInfo.phone}
               </motion.a>
 
               <motion.a

@@ -2,6 +2,7 @@ export const personalInfo = {
   name: "Kyle Chu",
   location: "Williston Park, NY",
   email: "kyleghchu@gmail.com",
+  phone: "(917) 656-9383",
   github: "https://github.com/kych23",
   linkedin: "https://www.linkedin.com/in/kych2204/",
   instagram: "https://www.instagram.com/kych2204/",
@@ -223,6 +224,17 @@ export const skills = {
 
 export const projects = [
   {
+    title: "Fantasy Football Predictors",
+    github: "https://github.com/kych23/ff_predictors",
+    description: "A mobile app that allows Cornell students to schedule coffee chats with all Cornell clubs that supports calendar events, messaging, and email notifications.",
+    technologies: ["Python", "SQLite", "SendGrid API", "Docker", "Google Cloud Platform", "Flask"],
+    achievements: [
+      "Architected scalable backend with SQLite and REST APIs",
+      "Integrated SendGrid API for automated notifications",
+      "Containerized and deployed production backend with Docker and Google Cloud Platform"
+    ],
+  },
+  {
     title: "Syllaparse",
     github: "https://github.com/khoanguyentran/syllaparse",
     description: "A full-stack web platform that automatically extracts lecture schedules and exam dates from PDF syllabi, streamlining academic planning for students.",
@@ -255,8 +267,6 @@ export const projects = [
       "Developed JWT authentication for secure user data"
     ],
   },
-  
-
   {
     title: "Latte Link",
     github: "https://github.com/kych23/FA23-Cornell-AppDev-Hack-Challenge",
