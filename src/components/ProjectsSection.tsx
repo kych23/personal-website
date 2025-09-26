@@ -27,9 +27,14 @@ export default function ProjectsSection() {
                 <motion.span
                   className="mr-3"
                   whileHover={{ 
-                    scale: 1.1, 
-                    rotate: [0, -10, 10, 0],
-                    transition: { duration: 0.4 }
+                    scale: [1, 1.3, 1.1, 1.2],
+                    rotate: [0, 360, 720],
+                    x: [0, 10, -10, 0],
+                    transition: { 
+                      duration: 1.2, 
+                      ease: "easeInOut",
+                      times: [0, 0.4, 0.8, 1]
+                    }
                   }}
                 >
                   <Rocket className="w-8 h-8 text-purple-500" />

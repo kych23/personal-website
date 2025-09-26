@@ -118,7 +118,7 @@ export default function CardScroll({
                         <h4 className="text-sm font-medium">Technologies</h4>
                       </div>
                       <div className="flex flex-wrap gap-2">
-                        {project.technologies.slice(0, 6).map((tech) => (
+                        {project.technologies.map((tech) => (
                           <span
                             key={tech}
                             className="px-2 py-1 bg-purple-500/10 text-xs rounded-md border border-purple-500/20"
@@ -126,11 +126,6 @@ export default function CardScroll({
                             {tech}
                           </span>
                         ))}
-                        {project.technologies.length > 6 && (
-                          <span className="px-2 py-1 bg-muted text-xs rounded-md border border-border">
-                            +{project.technologies.length - 6} more
-                          </span>
-                        )}
                       </div>
                     </div>
                   )}

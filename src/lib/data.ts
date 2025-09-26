@@ -226,12 +226,12 @@ export const projects = [
   {
     title: "Fantasy Football Predictors",
     github: "https://github.com/kych23/ff_predictors",
-    description: "A mobile app that allows Cornell students to schedule coffee chats with all Cornell clubs that supports calendar events, messaging, and email notifications.",
-    technologies: ["Python", "SQLite", "SendGrid API", "Docker", "Google Cloud Platform", "Flask"],
+    description: "A machine learning pipeline that predicts NFL player fantasy performance using regression models. Provides data-driven recommendations for lineup decisions, trades, and draft strategies.",
+    technologies: ["Python", "Scikit-learn", "Pandas", "NumPy", "DuckDB", "Parquet", "nflreadpy", "PyArrow", "Jupyter"],
     achievements: [
-      "Architected scalable backend with SQLite and REST APIs",
-      "Integrated SendGrid API for automated notifications",
-      "Containerized and deployed production backend with Docker and Google Cloud Platform"
+      "Built end-to-end ML pipeline processing 12+ years of NFL data with automated ETL",
+      "Implemented data pre-processing and feature engineering with DuckDB and complex SQL feature engineering",
+      "Designed time-aware model validation preventing data leakage with proper temporal splits"
     ],
   },
   {
