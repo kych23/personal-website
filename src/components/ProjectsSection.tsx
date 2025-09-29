@@ -20,20 +20,20 @@ export default function ProjectsSection() {
     // @ts-ignore - client:only is an Astro directive
     <div client:only="react">
       <section id="projects" className="bg-gradient-to-b from-background to-muted/20">
-        <div className="py-6">
+        <div className="py-4">
           <div className="container max-w-4xl mx-auto px-6 md:px-4">
             <MotionWrapper>
-              <h2 className="text-4xl font-bold mb-2 text-center flex items-center justify-center">
+              <h2 className="text-4xl font-bold mb-1 text-center flex items-center justify-center">
                 <motion.span
                   className="mr-3"
                   whileHover={{ 
-                    scale: [1, 1.3, 1.1, 1.2],
-                    rotate: [0, 360, 720],
-                    x: [0, 10, -10, 0],
+                    scale: 1.1,
+                    y: [-4, -8, -4, 0],
+                    x: [0, 3, -3, 0],
                     transition: { 
-                      duration: 1.2, 
+                      duration: 0.6, 
                       ease: "easeInOut",
-                      times: [0, 0.4, 0.8, 1]
+                      times: [0, 0.3, 0.7, 1]
                     }
                   }}
                 >
@@ -47,8 +47,8 @@ export default function ProjectsSection() {
         
         <CardScroll 
           items={cardScrollProjects}
-          cardWidth={320}
-          gap={24}
+          cardWidth={280}
+          gap={16}
           stickyHeightVh={400}
         />
       </section>

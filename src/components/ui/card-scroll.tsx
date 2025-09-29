@@ -78,7 +78,7 @@ export default function CardScroll({
       <div className="sticky top-0 h-screen overflow-hidden grid items-center bg-gradient-to-b from-background to-muted/20">
         <motion.div
           ref={trackRef}
-          className="flex px-6 md:px-16 py-2 will-change-transform"
+          className={`flex py-2 will-change-transform ${dist > 0 ? 'px-4 md:px-16' : 'justify-center'}`}
           style={{
             x: prefersReduced ? 0 : x,
             gap: `${gap}px`,
@@ -167,7 +167,6 @@ export default function CardScroll({
                     whileTap={{ scale: 0.95 }}
                   >
                     <Github className="h-4 w-4 mr-2 group-hover/link:rotate-12 transition-transform duration-300" />
-                    View on GitHub
                   </motion.a>
                 </CardFooter>
               </Card>
@@ -177,9 +176,6 @@ export default function CardScroll({
       </div>
 
       <style>{`
-        @media (max-width: 767px) {
-          section[aria-label="Projects"] > div > div { transform: none !important; }
-        }
         @media (prefers-reduced-motion: reduce) {
           section[aria-label="Projects"] * { transition: none !important; }
           section[aria-label="Projects"] > div > div { transform: none !important; }
