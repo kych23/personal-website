@@ -15,10 +15,11 @@ export const personalInfo = {
 
 export const workExperience = [
   {
-    company: "Spect AI",
+    company: "Nonlinear",
     location: "San Francisco, CA (Remote)",
     position: "Software Engineering Intern",
     period: "June 2025 - August 2025",
+    projectLink: "https://www.nonlinear.build/",
     achievements: [
       "Developed a node-based AI workflow builder to enable 15+ AEC companies to automate LLM and agent pipelines to reduce workflow execution times with FastAPI, React, LangChain, and PostgreSQL",
       "Engineered OCR document parsing and structured data extraction pipelines to cut manual document parsing time by 70% using AWS Textract, Pydantic, and PyMuPDF",
