@@ -47,7 +47,7 @@ export default function ProjectsSection() {
         
         <CardScroll 
           items={cardScrollProjects}
-          cardWidth={280}
+          cardWidth={375}
           gap={16}
           stickyHeightVh={400}
         />
