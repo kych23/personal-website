@@ -23,6 +23,3 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-# resume
-public/Kyle_Chu_Resume.pdf
-
