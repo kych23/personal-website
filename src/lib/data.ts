@@ -20,6 +20,7 @@ export const workExperience = [
     position: "Software Engineering Intern",
     period: "June 2025 - August 2025",
     projectLink: "https://www.nonlinear.build/",
+    logo: "/logos/nonlinear_logo.jpeg",
     achievements: [
       "Developed a node-based AI workflow builder to enable 15+ AEC companies to automate LLM and agent pipelines to reduce workflow execution times with FastAPI, React, LangChain, and PostgreSQL",
       "Engineered OCR document parsing and structured data extraction pipelines to cut manual document parsing time by 70% using AWS Textract, Pydantic, and PyMuPDF",
@@ -32,6 +33,7 @@ export const workExperience = [
     position: "Frontend Developer",
     period: "March 2024 - Present",
     projectLink: "https://www.cornellpdp.com/",
+    logo: "/logos/pdp_logo.png",
     achievements: [
       "Launched a web platform to streamline updates and boost alumni engagement, increasing viewership by 200% and raising $4,000 using React.js and TypeScript",
       "Optimized site performance and SEO to improve traffic by 85% through Next.js and efficient asset management",
@@ -44,6 +46,7 @@ export const workExperience = [
     position: "Frontend Developer",
     period: "October 2023 - May 2025",
     projectLink: "https://2024.igem.wiki/cornell/",
+    logo: "/logos/igem_logo.jpeg",
     achievements: [
       "Implemented the Oncurex website for the Cornell iGEM team using Figma, HTML, CSS, and JavaScript",
       "Built an interactive educational fruit-ninja game with custom images and animations using JavaScript and p5.js",
@@ -59,6 +62,7 @@ export const education = [
     major: "Bachelor of Science in Computer Science",
     minor: "Minor in Artificial Intelligence",
     period: "Aug 2023 - Expected May 2027",
+    logo: "/logos/cornell_logo.svg",
     activities: [
       "Pi Delta Psi Fraternity",
       "Cornell iGem",

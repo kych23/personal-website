@@ -12,6 +12,8 @@ interface TimelineItemProps {
   projectLink?: string;
   isLast?: boolean;
   index?: number;
+  logoSrc?: string;
+  logoAlt?: string;
   children?: React.ReactNode;
 }
 
@@ -24,8 +26,12 @@ export default function TimelineItem({
   projectLink,
   isLast = false,
   index = 0,
+  logoSrc,
+  logoAlt,
   children,
 }: TimelineItemProps) {
+  const [logoIsSquare, setLogoIsSquare] = React.useState<boolean | null>(null);
+
   return (
     <motion.div
       className="relative flex gap-6"
@@ -35,18 +41,55 @@ export default function TimelineItem({
       viewport={{ once: true, margin: "-50px" }}
     >
       <div className="flex flex-col items-center">
-        <motion.div
-          className="flex h-[18px] w-[18px] rounded-full border border-purple-500/50 bg-background dark:bg-muted z-10"
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 300,
-            damping: 15,
-            delay: index * 0.2 + 0.2,
-          }}
-          viewport={{ once: true, margin: "-50px" }}
-        />
+        {logoSrc ? (
+          <motion.div
+            className={cn(
+              "flex h-16 w-16 rounded-lg border border-purple-500/30 z-10 overflow-hidden shadow-sm",
+              logoSrc.includes("cornell_logo") 
+                ? "bg-white" 
+                : "bg-white dark:bg-muted",
+              logoIsSquare === false ? "p-1" : ""
+            )}
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 15,
+              delay: index * 0.2 + 0.2,
+            }}
+            viewport={{ once: true, margin: "-50px" }}
+          >
+            <img
+              src={logoSrc}
+              alt={logoAlt || subtitle}
+              className={cn(
+                "h-full w-full",
+                logoIsSquare === false ? "object-contain" : "object-cover"
+              )}
+              onLoad={(e) => {
+                const img = e.currentTarget as HTMLImageElement;
+                if (img.naturalWidth && img.naturalHeight) {
+                  const ratio = img.naturalWidth / img.naturalHeight;
+                  setLogoIsSquare(ratio > 0.9 && ratio < 1.1);
+                }
+              }}
+            />
+          </motion.div>
+        ) : (
+          <motion.div
+            className="flex h-[18px] w-[18px] rounded-full border border-purple-500/50 bg-background dark:bg-muted z-10"
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 15,
+              delay: index * 0.2 + 0.2,
+            }}
+            viewport={{ once: true, margin: "-50px" }}
+          />
+        )}
         {!isLast && (
           <motion.div
             className="w-px grow bg-gradient-to-b from-purple-500/50 to-pink-500/30 dark:from-purple-500/30 dark:to-pink-500/10"

@@ -115,6 +115,8 @@ export default function EducationSection() {
                 subtitle2={edu.minor}
                 date={`${edu.period}`}
                 location={edu.location}
+                logoSrc={(edu as any).logo}
+                logoAlt={`${edu.institution} logo`}
                 isLast={index === education.length - 1}
                 index={index}
               >

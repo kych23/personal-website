@@ -75,7 +75,7 @@ export default function CardScroll({
       className="relative"
       style={{ height: `${stickyHeightVh}vh` }}
     >
-      <div className="sticky top-0 h-screen overflow-hidden grid items-center bg-gradient-to-b from-background to-muted/20">
+      <div className="sticky top-0 h-screen overflow-hidden flex items-center bg-gradient-to-b from-background to-muted/20">
         <motion.div
           ref={trackRef}
           className={`flex py-2 will-change-transform ${dist > 0 ? 'px-4 md:px-16' : 'justify-center'}`}
@@ -98,7 +98,7 @@ export default function CardScroll({
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
               <Card 
-                className="group overflow-hidden dark:border-purple-500/10 h-full flex flex-col hover:shadow-xl transition-all duration-300"
+                className="group dark:border-purple-500/10 h-full max-h-[85vh] flex flex-col hover:shadow-xl transition-all duration-300 overflow-y-auto"
               >
                 <CardHeader className="bg-gradient-to-r from-purple-500/5 to-pink-500/5">
                   <CardTitle className="text-center group-hover:text-purple-500 transition-colors duration-300">

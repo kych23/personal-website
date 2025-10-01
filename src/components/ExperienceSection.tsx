@@ -39,6 +39,8 @@ export default function ExperienceSection() {
               date={job.period}
               location={job.location}
               projectLink={job.projectLink}
+              logoSrc={(job as any).logo}
+              logoAlt={`${job.company} logo`}
               isLast={index === workExperience.length - 1}
               index={index}
             >
