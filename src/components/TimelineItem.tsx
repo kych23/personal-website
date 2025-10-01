@@ -30,7 +30,7 @@ export default function TimelineItem({
   logoAlt,
   children,
 }: TimelineItemProps) {
-  const [logoIsSquare, setLogoIsSquare] = React.useState<boolean | null>(null);
+  const [logoIsSquare, setLogoIsSquare] = React.useState(true);
 
   return (
     <motion.div
@@ -47,8 +47,10 @@ export default function TimelineItem({
               "flex h-16 w-16 rounded-lg border border-purple-500/30 z-10 overflow-hidden shadow-sm",
               logoSrc.includes("cornell_logo") 
                 ? "bg-white" 
+                : logoSrc.includes("pdp_logo")
+                ? "bg-transparent"
                 : "bg-white dark:bg-muted",
-              logoIsSquare === false ? "p-1" : ""
+              !logoIsSquare && "p-1.5"
             )}
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
@@ -65,14 +67,12 @@ export default function TimelineItem({
               alt={logoAlt || subtitle}
               className={cn(
                 "h-full w-full",
-                logoIsSquare === false ? "object-contain" : "object-cover"
+                logoIsSquare ? "object-cover" : "object-contain"
               )}
               onLoad={(e) => {
                 const img = e.currentTarget as HTMLImageElement;
-                if (img.naturalWidth && img.naturalHeight) {
-                  const ratio = img.naturalWidth / img.naturalHeight;
-                  setLogoIsSquare(ratio > 0.9 && ratio < 1.1);
-                }
+                const ratio = img.naturalWidth / img.naturalHeight;
+                setLogoIsSquare(ratio >= 0.88 && ratio <= 1.12);
               }}
             />
           </motion.div>
