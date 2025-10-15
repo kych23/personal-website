@@ -98,7 +98,7 @@ export default function CardScroll({
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
               <Card 
-                className="group dark:border-purple-500/10 h-full max-h-[85vh] flex flex-col hover:shadow-xl transition-all duration-300 overflow-y-auto"
+                className="group dark:border-purple-500/10 h-full max-h-[85vh] min-h-[500px] flex flex-col hover:shadow-xl transition-all duration-300"
               >
                 <CardHeader className="bg-gradient-to-r from-purple-500/5 to-pink-500/5">
                   <CardTitle className="text-center group-hover:text-purple-500 transition-colors duration-300">
@@ -109,7 +109,7 @@ export default function CardScroll({
                   </CardDescription>
                 </CardHeader>
                 
-                <CardContent className="flex-grow space-y-4 pt-4">
+                <CardContent className="flex-grow space-y-4 pt-4 overflow-y-auto">
                   {/* Technologies */}
                   {!!project.technologies?.length && (
                     <div>
@@ -157,7 +157,7 @@ export default function CardScroll({
                   )}
                 </CardContent>
 
-                <CardFooter className="flex items-center justify-center py-4 border-t border-border/30 bg-gradient-to-r from-purple-500/5 to-pink-500/5">
+                <CardFooter className="flex items-center justify-center py-4 border-t border-border/30 bg-gradient-to-r from-purple-500/5 to-pink-500/5 mt-auto flex-shrink-0">
                   <motion.a
                     href={project.github}
                     target="_blank"

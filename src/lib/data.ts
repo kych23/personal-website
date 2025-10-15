@@ -15,6 +15,20 @@ export const personalInfo = {
 
 export const workExperience = [
   {
+    company: "Handshake AI",
+    location: "San Francisco, CA (Remote)",
+    position: "Handshake AI Fellowship",
+    period: "October 2025 - Present",
+    projectLink: "https://joinhandshake.com/ai",
+    logo: "/logos/handshakeai_logo.png",
+    achievements: [
+      "Evaluated AI-generated images against source prompts using a comprehensive 4-axis framework (Instruction Following, Image Consistency, Quality, AI-ness/Naturalness) to improve model training datasets",
+      "Scored image outputs on a 7-point scale and provided detailed written explanations for each evaluation, contributing to the refinement of generative AI model performance",
+      "Analyzed hundreds of AI-generated images daily, identifying patterns in model behavior and providing actionable feedback to enhance computer vision and image generation capabilities",
+      "Collaborated with research teams to establish standardized evaluation criteria, ensuring consistent and reliable assessment of AI model outputs across diverse use cases",
+    ],
+  },
+  {
     company: "Nonlinear",
     location: "San Francisco, CA (Remote)",
     position: "Software Engineering Intern",
