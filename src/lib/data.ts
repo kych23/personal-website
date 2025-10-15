@@ -22,10 +22,10 @@ export const workExperience = [
     projectLink: "https://joinhandshake.com/ai",
     logo: "/logos/handshakeai_logo.png",
     achievements: [
-      "Evaluated AI-generated images against source prompts using a comprehensive 4-axis framework (Instruction Following, Image Consistency, Quality, AI-ness/Naturalness) to improve model training datasets",
-      "Scored image outputs on a 7-point scale and provided detailed written explanations for each evaluation, contributing to the refinement of generative AI model performance",
-      "Analyzed hundreds of AI-generated images daily, identifying patterns in model behavior and providing actionable feedback to enhance computer vision and image generation capabilities",
-      "Collaborated with research teams to establish standardized evaluation criteria, ensuring consistent and reliable assessment of AI model outputs across diverse use cases",
+      "Conducted comprehensive AI model evaluation and data labeling using a 4-axis framework (Instruction Following, Image Consistency, Quality, AI-ness/Naturalness) to optimize training datasets for computer vision and generative AI models",
+      "Performed quantitative assessment of AI-generated image outputs using 7-point Likert scale scoring system, generating detailed annotations and feedback to improve model performance metrics and reduce hallucination rates",
+      "Analyzed 200+ AI-generated images using machine learning evaluation methodologies, identifying algorithmic patterns and providing actionable insights for neural network optimization and model fine-tuning",
+      "Established standardized data annotation protocols and evaluation criteria for AI research teams, ensuring consistent model assessment across multimodal AI systems and diverse computer vision applications",
     ],
   },
   {
@@ -62,9 +62,9 @@ export const workExperience = [
     projectLink: "https://2024.igem.wiki/cornell/",
     logo: "/logos/igem_logo.jpeg",
     achievements: [
-      "Implemented the Oncurex website for the Cornell iGEM team using Figma, HTML, CSS, and JavaScript",
-      "Built an interactive educational fruit-ninja game with custom images and animations using JavaScript and p5.js",
-      "Won gold medal and was nominated for \"Best Presentation\" at iGem Jamboree 2024, representing Cornell University in an international competition with over 75,000 participants and 460 teams",
+      "Designed and implemented the Oncurex website for Cornell iGEM team using Figma for UI/UX design, HTML, CSS, and JavaScript, creating responsive web interfaces",
+      "Developed interactive educational gaming application with custom graphics and animations using JavaScript and p5.js library, implementing game mechanics and user interaction systems for STEM education",
+      "Achieved gold medal and \"Best Presentation\" nomination at iGEM Jamboree 2024, representing Cornell University in international synthetic biology competition with 75,000+ participants and 460 teams worldwide",
     ],
   }
 ];
