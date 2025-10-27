@@ -14,20 +14,33 @@ export const personalInfo = {
 };
 
 export const workExperience = [
-  {
-    company: "Handshake AI",
-    location: "San Francisco, CA (Remote)",
-    position: "Handshake AI Fellowship",
-    period: "October 2025 - Present",
-    projectLink: "https://joinhandshake.com/ai",
-    logo: "/logos/handshakeai_logo.png",
-    achievements: [
-      "Conducted comprehensive AI model evaluation and data labeling using a 4-axis framework (Instruction Following, Image Consistency, Quality, AI-ness/Naturalness) to optimize training datasets for computer vision and generative AI models",
-      "Performed quantitative assessment of AI-generated image outputs using 7-point Likert scale scoring system, generating detailed annotations and feedback to improve model performance metrics and reduce hallucination rates",
-      "Analyzed 200+ AI-generated images using machine learning evaluation methodologies, identifying algorithmic patterns and providing actionable insights for neural network optimization and model fine-tuning",
-      "Established standardized data annotation protocols and evaluation criteria for AI research teams, ensuring consistent model assessment across multimodal AI systems and diverse computer vision applications",
-    ],
-  },
+  // {
+  //   company: "Cornell University Sustainable Design",
+  //   location: "Ithaca, NY",
+  //   position: "Web Advisor for Marketing and Communications",
+  //   period: "October 2025 - Present",
+  //   projectLink: "https://www.cusd.cornell.edu/index.html",
+  //   logo: "/logos/cusd_logo.jpeg",
+  //   achievements: [
+  //     "Designed and implemented a responsive website for Cornell University Sustainable Design, improving user engagement and information accessibility with React.js and TypeScript",
+  //     "Optimized site performance and SEO to improve traffic by 85% through Next.js and efficient asset management",
+  //     "Delivered a production-quality web app with CI/CD on Vercel, enabling reliable content updates and consistent UX",
+  //   ],
+  // },
+  // {
+  //   company: "Handshake AI",
+  //   location: "San Francisco, CA (Remote)",
+  //   position: "Handshake AI Fellowship",
+  //   period: "October 2025 - Present",
+  //   projectLink: "https://joinhandshake.com/ai",
+  //   logo: "/logos/handshakeai_logo.png",
+  //   achievements: [
+  //     "Conducted comprehensive AI model evaluation and data labeling using a 4-axis framework (Instruction Following, Image Consistency, Quality, AI-ness/Naturalness) to optimize training datasets for computer vision and generative AI models",
+  //     "Performed quantitative assessment of AI-generated image outputs using 7-point Likert scale scoring system, generating detailed annotations and feedback to improve model performance metrics and reduce hallucination rates",
+  //     "Analyzed 200+ AI-generated images using machine learning evaluation methodologies, identifying algorithmic patterns and providing actionable insights for neural network optimization and model fine-tuning",
+  //     "Established standardized data annotation protocols and evaluation criteria for AI research teams, ensuring consistent model assessment across multimodal AI systems and diverse computer vision applications",
+  //   ],
+  // },
   {
     company: "Nonlinear",
     location: "San Francisco, CA (Remote)",
@@ -80,6 +93,7 @@ export const education = [
     activities: [
       "Pi Delta Psi Fraternity",
       "Cornell iGem",
+      "Cornell University Sustainable Design",
       "Cornell Chinese Student Association",
       "Cornell Korean American Student Association",
     ],
