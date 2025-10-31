@@ -246,6 +246,7 @@ export const skills = {
     "AWS S3",
     "Google Cloud Storage",
     "SQLite",
+    "Supabase"
   ],
   aiAndDataScience: [
     "NumPy",
@@ -257,16 +258,16 @@ export const skills = {
 
 export const projects = [
   {
-    title: "Fantasy Football Predictors",
+    title: "FantasyForecast",
     github: "https://github.com/kych23/ff_predictors",
-    description: "A machine learning pipeline that predicts NFL player fantasy performance using regression models. Provides data-driven recommendations for lineup decisions, trades, and draft strategies.",
-    technologies: ["Python", "Scikit-learn", "Pandas", "NumPy", "DuckDB", "Parquet", "nflreadpy", "PyArrow", "Jupyter"],
+    description: "Full-stack app for weekly NFL fantasy point projections",
+    technologies: ["Python", "Scikit-learn", "Pandas", "NumPy", "TypeScript", "React.js", "Next.js", "Tailwind CSS", "Vercel", "FastAPI", "PostgreSQL", "Supabase", "Jupyter"],
     achievements: [
-      "Built end-to-end ML pipeline processing 12+ years of NFL data with automated ETL",
-      "Implemented data pre-processing and feature engineering with DuckDB and complex SQL feature engineering",
-      "Designed time-aware model validation preventing data leakage with proper temporal splits"
-    ],
-  },
+      "Built an end to end ML pipeline with a PostgreSQL feature store, FastAPI for live/saved predictions, and per-position XGBoost models validated with expanding timeseries CV and hyperparameter search",
+      "Processed 12+ years of NFL data with automated ETL, feature selection and engineering in Python with Pandas and NumPy",
+      "Outperformed major public fantasy projection systems by achieving up to 45% within ±3 points accuracy and reducing average prediction error by 25% across 12 years of NFL data."
+  ]
+  },  
   {
     title: "Syllaparse",
     github: "https://github.com/khoanguyentran/syllaparse",
