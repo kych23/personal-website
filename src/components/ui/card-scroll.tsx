@@ -37,6 +37,7 @@ export default function CardScroll({
   const sectionRef = useRef<HTMLElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const [{ dist }, setDims] = useState({ dist: 0 });
+  const [isUltraWide, setIsUltraWide] = useState(false);
 
   useLayoutEffect(() => {
     const onResize = () => {
@@ -54,6 +55,23 @@ export default function CardScroll({
     }
   }, [items.length]);
 
+  // Detect ultrawide screens (matches Tailwind's 2xl breakpoint at 1536px)
+  useLayoutEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mq = window.matchMedia('(min-width: 1536px)');
+    const onChange = (e: MediaQueryListEvent | MediaQueryList) => {
+      const matches = 'matches' in e ? e.matches : (e as MediaQueryList).matches;
+      setIsUltraWide(matches);
+    };
+    onChange(mq);
+    // @ts-ignore older Safari support
+    mq.addEventListener ? mq.addEventListener('change', onChange) : mq.addListener(onChange);
+    return () => {
+      // @ts-ignore older Safari support
+      mq.removeEventListener ? mq.removeEventListener('change', onChange) : mq.removeListener(onChange);
+    };
+  }, []);
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end end"],
@@ -67,6 +85,96 @@ export default function CardScroll({
     },
     []
   );
+
+  if (isUltraWide) {
+    return (
+      <section aria-label="Projects Grid" className="relative">
+        <div className="mx-auto max-w-screen-2xl px-6 py-8">
+          <div className="grid grid-cols-3 2xl:grid-cols-4 gap-6">
+            {items.map((project) => (
+              <motion.div
+                key={project.id}
+                whileHover={{ y: -8 }}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              >
+                <Card 
+                  className="group dark:border-purple-500/10 h-full max-h-[85vh] min-h-[500px] flex flex-col hover:shadow-xl transition-all duration-300"
+                >
+                  <CardHeader className="bg-gradient-to-r from-purple-500/5 to-pink-500/5">
+                    <CardTitle className="text-center group-hover:text-purple-500 transition-colors duration-300">
+                      {project.title}
+                    </CardTitle>
+                    <CardDescription className="text-sm text-muted-foreground mt-2">
+                      {project.description}
+                    </CardDescription>
+                  </CardHeader>
+                  
+                  <CardContent className="flex-grow space-y-4 pt-4 overflow-y-auto">
+                    {!!project.technologies?.length && (
+                      <div>
+                        <div className="flex items-center mb-2">
+                          <Code className="w-4 h-4 mr-2 text-purple-500" />
+                          <h4 className="text-sm font-medium">Technologies</h4>
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                          {project.technologies.map((tech) => (
+                            <span
+                              key={tech}
+                              className="px-2 py-1 bg-purple-500/10 text-xs rounded-md border border-purple-500/20"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {!!project.achievements?.length && (
+                      <div>
+                        <div className="flex items-center mb-2">
+                          <Trophy className="w-4 h-4 mr-2 text-purple-500" />
+                          <h4 className="text-sm font-medium">Key Achievements</h4>
+                        </div>
+                        <ul className="space-y-2">
+                          {project.achievements.slice(0, 3).map((achievement, index) => (
+                            <li
+                              key={index}
+                              className="text-sm text-muted-foreground flex items-start"
+                            >
+                              <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                              {achievement}
+                            </li>
+                          ))}
+                          {project.achievements.length > 3 && (
+                            <li className="text-sm text-muted-foreground italic">
+                              +{project.achievements.length - 3} more achievements
+                            </li>
+                          )}
+                        </ul>
+                      </div>
+                    )}
+                  </CardContent>
+
+                  <CardFooter className="flex items-center justify-center py-4 border-t border-border/30 bg-gradient-to-r from-purple-500/5 to-pink-500/5 mt-auto flex-shrink-0">
+                    <motion.a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-sm text-muted-foreground hover:text-purple-500 transition-colors group/link"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Github className="h-4 w-4 mr-2 group-hover/link:rotate-12 transition-transform duration-300" />
+                    </motion.a>
+                  </CardFooter>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section
