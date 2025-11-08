@@ -263,7 +263,7 @@ export const projects = [
     description: "Full-stack app for weekly NFL fantasy point projections",
     technologies: ["Python", "Scikit-learn", "Pandas", "NumPy", "TypeScript", "React.js", "Next.js", "Tailwind CSS", "Vercel", "FastAPI", "PostgreSQL", "Supabase", "Jupyter"],
     achievements: [
-      "Built an end to end ML pipeline with a PostgreSQL feature store, FastAPI for live/saved predictions, and per-position XGBoost models validated with expanding timeseries CV and hyperparameter search",
+      "Built an end to end ML pipeline with a PostgreSQL feature store and per-position XGBoost models validated with expanding timeseries CV and hyperparameter search",
       "Processed 12+ years of NFL data with automated ETL, feature selection and engineering in Python with Pandas and NumPy",
       "Outperformed major public fantasy projection systems by achieving up to 45% within ±3 points accuracy and reducing average prediction error by 25% across 12 years of NFL data."
   ]
