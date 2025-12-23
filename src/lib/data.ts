@@ -258,6 +258,17 @@ export const skills = {
 
 export const projects = [
   {
+    title: "Video Game Reviews Analysis",
+    github: "https://github.com/kych23/r6-reviews-sentiment-analysis",
+    description: "Computational text analysis project investigating linguistic differences between negative game reviews that recommend versus don't recommend, using NLP and statistical modeling",
+    technologies: ["Python", "Pandas", "NumPy", "NLTK", "spaCy", "Scikit-learn", "Jupyter", "Matplotlib", "Seaborn", "Kaggle"],
+    achievements: [
+      "Processed and analyzed 350,000+ Steam game reviews using VADER sentiment analysis",
+      "Engineered lexicon-based features for bugs/performance, monetization, and gameplay complaints, and applied Latent Dirichlet Allocation (LDA) topic modeling with 7 topics",
+      "Built logistic regression model revealing gameplay-focused topics have higher odds ratio in recommended reviews, while bug/performance topics have odds ratio, identifying key linguistic predictors of recommendation behavior"
+    ],
+  },
+  {
     title: "FantasyForecast",
     github: "https://github.com/kych23/ff_predictors",
     description: "Full-stack app for weekly NFL fantasy point projections",
