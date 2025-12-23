@@ -263,9 +263,9 @@ export const projects = [
     description: "Computational text analysis project investigating linguistic differences between negative game reviews that recommend versus don't recommend, using NLP and statistical modeling",
     technologies: ["Python", "Pandas", "NumPy", "NLTK", "spaCy", "Scikit-learn", "Jupyter", "Matplotlib", "Seaborn", "Kaggle"],
     achievements: [
-      "Processed and analyzed 350,000+ Steam game reviews using VADER sentiment analysis",
-      "Engineered lexicon-based features for bugs/performance, monetization, and gameplay complaints, and applied Latent Dirichlet Allocation (LDA) topic modeling with 7 topics",
-      "Built logistic regression model revealing gameplay-focused topics have higher odds ratio in recommended reviews, while bug/performance topics have odds ratio, identifying key linguistic predictors of recommendation behavior"
+      "Processed 371K Steam reviews using VADER sentiment analysis, filtered to 18,898 balanced negative reviews for classification",
+      "Engineered lexicon-based features and applied LDA topic modeling with 7 topics on 5,000-word vocabulary to extract linguistic patterns",
+      "Identified significant predictors and found that monetization mentions 19% less frequent in recommended reviews (OR: 0.82), gameplay topics 8.4x more likely"
     ],
   },
   {
