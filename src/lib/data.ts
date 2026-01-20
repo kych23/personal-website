@@ -42,6 +42,19 @@ export const workExperience = [
   //   ],
   // },
   {
+    company: "Cornell Ann S. Bowers College of Computing and Information Science",
+    location: "Ithaca, NY",
+    position: "Teaching Assistant",
+    period: "January 2026 - Present",
+    projectLink: "https://www.cs.cornell.edu/",
+    logo: "/logos/bowerscis_logo.jpeg",
+    achievements: [
+      "Served as Teaching Assistant for CS 4670: Introduction to Computer Vision, leading discussion sections and providing guidance to students",
+      "Assisted with the development of assignments, grading guides, and course materials to enhance curriculum quality and student comprehension",
+      "Held regular office hours to provide one-on-one support, clarify course concepts, and help students with computer vision projects",
+    ],
+  },
+  {
     company: "Nonlinear",
     location: "San Francisco, CA (Remote)",
     position: "Software Engineering Intern",
