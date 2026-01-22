@@ -217,12 +217,20 @@ export const coursework = [
       title: "Text Mining History and Literature",
       description: "The class will introduce methods for computer-assisted analysis of historical and literary text collections. It will cover corpus curation, representing text as data, building statistical models from text, and interpreting quantitative results. The class will also reflect on how computational methods fit with existing practices in the humanities, and how we can use models as complements to our own interpretations. Following the course, students will be able to assist faculty in quantitative and computational humanities scholarship."
     }
+  },
+  {
+    short_name: "Deep Learning",
+    course: {
+      number: "CS 4782",
+      title: "Introduction to Deep Learning",
+      description: "This class is an introductory course to deep learning. It covers the fundamental principles behind training and inference of deep networks, the specific architecture design choices applicable for different data modalities, discriminative and generative settings, and the ethical and societal implications of such models."
+    }
   }
 ];
 export const skills = {
   coreLanguages: [
     "JavaScript",
-    "TypeScript", 
+    "TypeScript",
     "Python",
     "Java",
     "SQL",
@@ -246,7 +254,7 @@ export const skills = {
   ],
   cloudAndDevOps: [
     "AWS",
-    "GCP", 
+    "GCP",
     "Docker",
     "Vercel",
     "Render",
@@ -290,8 +298,8 @@ export const projects = [
       "Built an end to end ML pipeline with a PostgreSQL feature store and per-position XGBoost models validated with expanding timeseries CV and hyperparameter search",
       "Processed 12+ years of NFL data with automated ETL, feature selection and engineering in Python with Pandas and NumPy",
       "Outperformed major public fantasy projection systems by achieving up to 45% within ±3 points accuracy and reducing average prediction error by 25% across 12 years of NFL data."
-  ]
-  },  
+    ]
+  },
   {
     title: "Syllaparse",
     github: "https://github.com/khoanguyentran/syllaparse",
