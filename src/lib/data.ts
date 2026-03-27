@@ -22,9 +22,9 @@ export const workExperience = [
     projectLink: "https://www.cs.cornell.edu/",
     logo: "/logos/bowerscis_logo.jpeg",
     achievements: [
-      "Served as Teaching Assistant for CS 4670: Introduction to Computer Vision, leading discussion sections and providing guidance to students",
+      "Served as Teaching Assistant for CS 4670: Introduction to Computer Vision, leading office hours and providing technical guidance to 170+ students",
       "Assisted with the development of assignments, grading guides, and course materials to enhance curriculum quality and student comprehension",
-      "Held regular office hours to provide one-on-one support, clarify course concepts, and help students with computer vision projects",
+      "Partnering with a 20-person course staff to streamline grading workflows and provide architectural feedback on student assignments involving convolutional architectures, semantic segmentation, and Vision-Language models using PyTorch and NumPy",
     ],
   },
   {
