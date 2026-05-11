@@ -15,11 +15,23 @@ export const personalInfo = {
 
 export const workExperience = [
   {
+    company: "Amazon Web Services (AWS)",
+    location: "Seattle, WA",
+    position: "Software Development Engineer Intern",
+    period: "June 2026 - August 2026",
+    projectLink: "https://www.linkedin.com/company/amazon-web-services/posts/?feedView=all",
+    logo: "/logos/aws_logo.png",
+    achievements: [
+      "Incoming Summer 2026",
+      "Just Walk Out/Go Team"
+    ],
+  },
+  {
     company: "Cornell Ann S. Bowers College of Computing and Information Science",
     location: "Ithaca, NY",
     position: "Teaching Assistant",
     period: "January 2026 - Present",
-    projectLink: "https://www.cs.cornell.edu/",
+    projectLink: "https://www.linkedin.com/company/cornell-university-college-of-computing-and-information-science/posts/?feedView=all",
     logo: "/logos/bowerscis_logo.jpeg",
     achievements: [
       "Served as Teaching Assistant for CS 4670: Introduction to Computer Vision, leading office hours and providing technical guidance to 170+ students",
@@ -32,7 +44,7 @@ export const workExperience = [
     location: "San Francisco, CA (Remote)",
     position: "Software Engineering Intern",
     period: "June 2025 - August 2025",
-    projectLink: "https://www.nonlinear.build/",
+    projectLink: "https://www.linkedin.com/company/nonlinearbuild/posts/?feedView=all",
     logo: "/logos/nonlinear_logo.jpeg",
     achievements: [
       "Developed a node-based AI workflow builder to enable 15+ AEC companies to automate LLM and agent pipelines to reduce workflow execution times with FastAPI, React, LangChain, and PostgreSQL",
@@ -75,7 +87,7 @@ export const education = [
     major: "Bachelor of Science in Computer Science",
     minor: "Minor in Artificial Intelligence",
     period: "Aug 2023 - Expected May 2027",
-    logo: "/logos/cornell_logo.svg",
+    logo: "/logos/cornell_logo.png",
     activities: [
       "Pi Delta Psi Fraternity",
       "Cornell iGem",
@@ -199,7 +211,15 @@ export const coursework = [
       title: "Introduction to Deep Learning",
       description: "This class is an introductory course to deep learning. It covers the fundamental principles behind training and inference of deep networks, the specific architecture design choices applicable for different data modalities, discriminative and generative settings, and the ethical and societal implications of such models."
     }
-  }
+  },
+  {
+    short_name: "Qualitative User Research/Design",
+    course: {
+      number: "INFO 4400",
+      title: "Qualitative User Research and Design Methods",
+      description: "This upper-level course provides an in-depth understanding of and experience with advanced concepts and techniques for researching, ideating, critiquing, designing, prototyping, and evaluating interactive technologies intended for people to use and incorporate in their lives. The course focuses on advanced user research and design methods."
+    }
+  },
 ];
 export const skills = {
   coreLanguages: [

@@ -34,7 +34,7 @@ export default function TimelineItem({
 
   return (
     <motion.div
-      className="relative flex gap-6"
+      className="relative flex gap-7"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -44,7 +44,7 @@ export default function TimelineItem({
         {logoSrc ? (
           <motion.div
             className={cn(
-              "flex h-16 w-16 rounded-lg border border-purple-500/30 z-10 overflow-hidden shadow-sm",
+              "flex h-24 w-24 shrink-0 rounded-lg border border-purple-500/30 z-10 overflow-hidden shadow-sm",
               logoSrc.includes("cornell_logo") 
                 ? "bg-white" 
                 : logoSrc.includes("pdp_logo")
