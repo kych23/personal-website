@@ -22,8 +22,10 @@ export const workExperience = [
     projectLink: "https://www.linkedin.com/company/amazon-web-services/posts/?feedView=all",
     logo: "/logos/aws_logo.png",
     achievements: [
-      "Incoming Summer 2026",
-      "Just Walk Out/Go Team"
+      "Just Walk Out Technology Team", 
+      "Designing and shipping an end-to-end ML pipeline with AWS (SQS, SNS, S3, DynamoDB) that automatically identifies whether an unidentified person is a store employee, targeting 70% reduction in unclassified sessions across 375+ stores",
+      "Building the full backend communication infrastructure between 3 independent services in Kotlin to route 86,000+ monthly unclassified sessions through a computer vision based classifier",
+      "Architecting a computer vision classifier using deep learning embeddings through Python that compares a shopper's camera appearance against known employee clusters"
     ],
   },
   {
