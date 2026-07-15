@@ -23,9 +23,10 @@ export const workExperience = [
     logo: "/logos/aws_logo.png",
     achievements: [
       "Just Walk Out Technology Team", 
-      "Designing and shipping an end-to-end ML pipeline with AWS (SQS, SNS, S3, DynamoDB) that automatically identifies whether an unidentified person is a store employee, targeting 70% reduction in unclassified sessions across 375+ stores",
-      "Building the full backend communication infrastructure between 3 independent services in Kotlin to route 86,000+ monthly unclassified sessions through a computer vision based classifier",
-      "Architecting a computer vision classifier using deep learning embeddings through Python that compares a shopper's camera appearance against known employee clusters"
+      "Designed and shipped an end-to-end ML system using AWS SQS, SNS, S3, and DynamoDB that automatically identified store employees, reducing unidentified sessions across 450 stores",
+      "Engineered the full backend communication infrastructure between 3 independent services in Kotlin to route 290,000+ monthly unidentified sessions through a computer vision based classifier, achieving a 10 minute average end-to-end latency",
+      "Architected a computer vision pipeline using deep learning embeddings and clustering through Python that compares an unidentified session's visual appearance against known employee images, achieving 88% precision at a 0% false positive rate",
+      "Reduced manual operations review volume by 70% by automatically reclassifying employee sessions that would otherwise require human triaging"
     ],
   },
   {
