@@ -19,7 +19,7 @@ export default function ProjectsSection() {
   return (
     // @ts-ignore - client:only is an Astro directive
     <div client:only="react">
-      <section id="projects" className="bg-gradient-to-b from-background to-muted/20">
+      <section id="projects" className="scroll-mt-24 bg-gradient-to-b from-muted/20 to-background">
         <div className="py-4">
           <div className="container max-w-4xl mx-auto px-6 md:px-4">
             <MotionWrapper>

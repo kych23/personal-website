@@ -40,19 +40,23 @@ export default function CardScroll({
   const [isUltraWide, setIsUltraWide] = useState(false);
 
   useLayoutEffect(() => {
-    const onResize = () => {
-      const track = trackRef.current;
-      if (!track || typeof window === 'undefined') return;
-      const rowWidth = track.scrollWidth;
-      const vw = window.innerWidth;
-      const d = Math.max(0, rowWidth - vw);
-      setDims({ dist: d });
+    const track = trackRef.current;
+    if (!track || typeof window === 'undefined') return;
+    const measure = () => {
+      const d = Math.max(0, track.scrollWidth - window.innerWidth);
+      setDims((prev) => (prev.dist === d ? prev : { dist: d }));
     };
-    onResize();
-    if (typeof window !== 'undefined') {
-      window.addEventListener("resize", onResize);
-      return () => window.removeEventListener("resize", onResize);
-    }
+    measure();
+    // Re-measure when the track's own size changes: the horizontal padding
+    // class is applied only once dist > 0, which widens the track after the
+    // first measurement.
+    const ro = new ResizeObserver(measure);
+    ro.observe(track);
+    window.addEventListener("resize", measure);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", measure);
+    };
   }, [items.length]);
 
   // Detect ultrawide screens (matches Tailwind's 2xl breakpoint at 1536px)
@@ -183,7 +187,7 @@ export default function CardScroll({
       className="relative"
       style={{ height: `${stickyHeightVh}vh` }}
     >
-      <div className="sticky top-0 h-screen overflow-hidden flex items-center bg-gradient-to-b from-background to-muted/20">
+      <div className="sticky top-0 h-screen overflow-hidden flex items-center">
         <motion.div
           ref={trackRef}
           className={`flex py-2 will-change-transform ${dist > 0 ? 'px-4 md:px-16' : 'justify-center'}`}

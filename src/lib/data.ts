@@ -33,13 +33,13 @@ export const workExperience = [
     company: "Cornell Ann S. Bowers College of Computing and Information Science",
     location: "Ithaca, NY",
     position: "Teaching Assistant",
-    period: "January 2026 - Present",
+    period: "January 2026 - May 2026",
     projectLink: "https://www.linkedin.com/company/cornell-university-college-of-computing-and-information-science/posts/?feedView=all",
     logo: "/logos/bowerscis_logo.jpeg",
     achievements: [
       "Served as Teaching Assistant for CS 4670: Introduction to Computer Vision, leading office hours and providing technical guidance to 170+ students",
       "Assisted with the development of assignments, grading guides, and course materials to enhance curriculum quality and student comprehension",
-      "Partnering with a 20-person course staff to streamline grading workflows and provide architectural feedback on student assignments involving convolutional architectures, semantic segmentation, and Vision-Language models using PyTorch and NumPy",
+      "Partnered with a 20-person course staff to streamline grading workflows and provide architectural feedback on student assignments involving convolutional architectures, semantic segmentation, and Vision-Language models using PyTorch and NumPy",
     ],
   },
   {
@@ -229,6 +229,7 @@ export const skills = {
     "JavaScript",
     "TypeScript",
     "Python",
+    "Kotlin",
     "Java",
     "SQL",
     "HTML/CSS",
@@ -255,22 +256,37 @@ export const skills = {
     "Docker",
     "Vercel",
     "Render",
-    "Git"
+  ],
+  developerTools: [
+    "Git",
+    "Cursor",
+    "Claude Code",
+    "Kiro IDE & CLI",
+    "MCP Integration",
+    "Kibana",
+    
   ],
   databasesAndStorage: [
     "PostgreSQL",
     "MongoDB",
     "Redis",
     "AWS S3",
+    "AWS DynamoDB",
     "Google Cloud Storage",
     "SQLite",
-    "Supabase"
+    "Supabase",
+    "DuckDB",
   ],
   aiAndDataScience: [
     "NumPy",
+    "Pandas",
     "PyTorch",
     "Scikit-learn",
     "LangChain",
+    "HuggingFace",
+    "OpenAI API",
+    "RAG Architecture",
+    "Prompt Engineering",
   ],
 };
 

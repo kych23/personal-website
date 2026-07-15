@@ -3,7 +3,7 @@ import { skills } from "@/lib/data";
 import { motion } from "framer-motion";
 import MotionWrapper from "./MotionWrapper";
 import { GlassCard } from "./ui/glass-card";
-import { Wrench, Code, Palette, Database, Cloud, Brain, Server } from "lucide-react";
+import { Wrench, Code, Palette, Database, Cloud, Brain, Server, Terminal } from "lucide-react";
 
 function SkillTag({ skill, index }: { skill: string; index: number }) {
   return (
@@ -49,7 +49,7 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="py-12 bg-gradient-to-b from-background to-muted/20"
+      className="scroll-mt-24 py-12 bg-gradient-to-b from-background to-muted/20"
     >
       <div className="container max-w-4xl mx-auto px-6 md:px-4">
         <MotionWrapper>
@@ -147,6 +147,19 @@ export default function SkillsSection() {
               </h3>
               <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                 {skills.aiAndDataScience.map((skill, index) => (
+                  <SkillTag key={skill} skill={skill} index={index} />
+                ))}
+              </div>
+            </GlassCard>
+          </motion.div>
+
+          <motion.div variants={skillCategoryVariants}>
+            <GlassCard className="p-4">
+              <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
+                <Terminal className="w-5 h-5 mr-2 text-purple-500" /> Developer Tools
+              </h3>
+              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                {skills.developerTools.map((skill, index) => (
                   <SkillTag key={skill} skill={skill} index={index} />
                 ))}
               </div>
