@@ -287,14 +287,25 @@ export const projects = [
     ],
   },
   {
+    title: "LoRA Re-Implementation",
+    github: "https://github.com/kych23/LoRA_Re-implementation",
+    description: "CS 4782 final project re-implementing LoRA: Low-Rank Adaptation of Large Language Models on RoBERTa-base for parameter-efficient fine-tuning",
+    technologies: ["Python", "PyTorch", "HuggingFace Transformers", "RoBERTa", "LoRA", "GLUE", "CUDA"],
+    achievements: [
+      "Re-implemented LoRA by injecting trainable rank-8 low-rank adapters into frozen RoBERTa-base Q/V attention projections for parameter-efficient fine-tuning on GLUE tasks",
+      "Reproduced Table 2 benchmark results on SST-2, QNLI, and RTE, matching paper LoRA accuracy within 1% on SST-2 (94.38 vs 95.1) and QNLI (92.81 vs 93.3)",
+      "Matched full fine-tuning quality using only 294,912 trainable parameters (~0.24% of full fine-tuning's 124M parameters), with reproducible experiment scripts and fixed seeds",
+    ],
+  },
+  {
     title: "FantasyForecast",
     github: "https://github.com/kych23/ff_predictors",
     description: "Full-stack app for weekly NFL fantasy point projections",
     technologies: ["Python", "Scikit-learn", "Pandas", "NumPy", "TypeScript", "React.js", "Next.js", "Tailwind CSS", "Vercel", "FastAPI", "PostgreSQL", "Supabase", "Jupyter"],
     achievements: [
-      "Built an end to end ML pipeline with a PostgreSQL feature store and per-position XGBoost models validated with expanding timeseries CV and hyperparameter search",
-      "Processed 12+ years of NFL data with automated ETL, feature selection and engineering in Python with Pandas and NumPy",
-      "Outperformed major public fantasy projection systems by achieving up to 45% within ±3 points accuracy and reducing average prediction error by 25% across 12 years of NFL data."
+      "Developed a draft recommendation system that outperforms popular public fantasy football strategies by 19% by training a LightGBM machine learning model on 12+ years of historical NFL data",
+      "Created a start/sit weekly optimization tool that picked the best available player 67.5% of the time by pairing p10/p50/p90 percentile forecasts with a linear programming optimization solver",
+      "Engineered features from raw multi-year time-series and external data sources while enforcing 144 automated tests that blocked future information from leaking into training data",
     ]
   },
   {
