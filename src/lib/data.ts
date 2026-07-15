@@ -112,7 +112,7 @@ export const coursework = [
     }
   },
   {
-    short_name: "Algorithms Analysis",
+    short_name: "Analysis of Algorithms",
     course: {
       number: "CS 4820",
       title: "Introduction to Analysis of Algorithms",
