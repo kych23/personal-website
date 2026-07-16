@@ -259,6 +259,8 @@ export const skills = {
   ],
   developerTools: [
     "Git",
+    "Visual Studio Code",
+    "IntelliJ IDEA",
     "Cursor",
     "Claude Code",
     "Kiro IDE & CLI",
