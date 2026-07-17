@@ -20,7 +20,7 @@ const {
 } = Astro.props;
 
 const siteUrl = "https://kyle-chu.vercel.app";
-const ogImage = `${siteUrl}/profile.png`;
+const ogImage = `${siteUrl}/og-banner.png`;
 
 const personSchema = {
   "@context": "https://schema.org",
@@ -52,6 +52,8 @@ const personSchema = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="2400" />
+    <meta property="og:image:height" content="1260" />
     <meta property="og:url" content={siteUrl} />
 
     <meta name="twitter:card" content="summary_large_image" />
