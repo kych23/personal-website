@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kylechu.vercel.app/sitemap-index.xml
+Sitemap: https://kyle-chu.vercel.app/sitemap-index.xml
