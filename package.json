@@ -1,13 +1,13 @@
 {
-  "name": "my-portfolio",
+  "name": "kyle-chu-portfolio",
   "type": "module",
-  "version": "0.0.1",
-  "description": "Modern portfolio template with animations and glassmorphism effects",
-  "author": "Rishikesh S",
+  "version": "1.0.0",
+  "description": "Personal portfolio of Kyle Chu - Software Engineer",
+  "author": "Kyle Chu",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rishikesh2003/my-portfolio"
+    "url": "https://github.com/kych23/portfolio"
   },
   "scripts": {
     "dev": "astro dev",
