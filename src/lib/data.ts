@@ -5,9 +5,9 @@ export const personalInfo = {
   phone: "(917) 656-9383",
   github: "https://github.com/kych23",
   linkedin: "https://www.linkedin.com/in/kych2204/",
-  instagram: "https://www.instagram.com/kych2204/",
-  facebook: "https://www.facebook.com/kyle.chu.506698/",
-  profilePicture: "/profile.png",
+  // instagram: "https://www.instagram.com/kych2204/",
+  // facebook: "https://www.facebook.com/kyle.chu.506698/",
+  profilePicture: "/profile.webp",
   resume: "/Kyle_Chu_Resume.pdf",
   heroDescription:
     "Hi! I'm Kyle, a Computer Science student at Cornell University who loves tackling challenging problems through innovative solutions. I'm passionate about building software that makes a real difference in people's lives, whether it's streamlining workflows or solving everyday problems. I enjoy the challenge of solving complex problems and learning new technologies along the way. With hands-on experience in full-stack development and AI engineering, I'm excited to bring my curiosity, creativity, and collaborative spirit to meaningful projects where I can continue growing as a software engineer.",
@@ -18,7 +18,7 @@ export const workExperience = [
     company: "Amazon Web Services (AWS)",
     location: "Seattle, WA",
     position: "Software Development Engineer Intern",
-    period: "June 2026 - August 2026",
+    period: "June 2026 - Present",
     projectLink: "https://www.linkedin.com/company/amazon-web-services/posts/?feedView=all",
     logo: "/logos/aws_logo.png",
     achievements: [
@@ -294,17 +294,6 @@ export const skills = {
 
 export const projects = [
   {
-    title: "Video Game Reviews Analysis",
-    github: "https://github.com/kych23/r6-reviews-sentiment-analysis",
-    description: "Computational text analysis project investigating linguistic differences between negative game reviews that recommend versus don't recommend, using NLP and statistical modeling",
-    technologies: ["Python", "Pandas", "NumPy", "NLTK", "spaCy", "Scikit-learn", "Jupyter", "Matplotlib", "Seaborn", "Kaggle"],
-    achievements: [
-      "Processed 371K Steam reviews using VADER sentiment analysis, filtered to 18,898 balanced negative reviews for classification",
-      "Engineered lexicon-based features and applied LDA topic modeling with 7 topics on 5,000-word vocabulary to extract linguistic patterns",
-      "Identified significant predictors and found that monetization mentions 19% less frequent in recommended reviews (OR: 0.82), gameplay topics 8.4x more likely"
-    ],
-  },
-  {
     title: "LoRA Re-Implementation",
     github: "https://github.com/kych23/LoRA_Re-implementation",
     description: "CS 4782 final project re-implementing LoRA: Low-Rank Adaptation of Large Language Models on RoBERTa-base for parameter-efficient fine-tuning",
@@ -335,6 +324,17 @@ export const projects = [
       "Used by over 100 students across multiple universities",
       "Reduced manual calendar entry time by 92%",
       "Implemented efficient caching with Redis for faster query performance"
+    ],
+  },
+  {
+    title: "Video Game Reviews Analysis",
+    github: "https://github.com/kych23/r6-reviews-sentiment-analysis",
+    description: "Computational text analysis project investigating linguistic differences between negative game reviews that recommend versus don't recommend, using NLP and statistical modeling",
+    technologies: ["Python", "Pandas", "NumPy", "NLTK", "spaCy", "Scikit-learn", "Jupyter", "Matplotlib", "Seaborn", "Kaggle"],
+    achievements: [
+      "Processed 371K Steam reviews using VADER sentiment analysis, filtered to 18,898 balanced negative reviews for classification",
+      "Engineered lexicon-based features and applied LDA topic modeling with 7 topics on 5,000-word vocabulary to extract linguistic patterns",
+      "Identified significant predictors and found that monetization mentions 19% less frequent in recommended reviews (OR: 0.82), gameplay topics 8.4x more likely"
     ],
   },
   {

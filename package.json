@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.2.1",
+    "@astrojs/sitemap": "^3.7.3",
+    "@fontsource/inter": "^5.2.8",
     "@radix-ui/react-slot": "^1.1.2",
     "@tailwindcss/vite": "^4.0.14",
     "@types/react": "^19.0.12",

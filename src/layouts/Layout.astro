@@ -1,32 +1,65 @@
 ---
 import "../styles/global.css";
+import "@fontsource/inter/300.css";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
 import Analytics from '@vercel/analytics/astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
+import { personalInfo } from "@/lib/data";
 
 interface Props {
   title?: string;
   description?: string;
 }
 
-const { title = "Kyle Chu • Software Engineer", description = "My Portfolio" } =
-  Astro.props;
+const {
+  title = "Kyle Chu • Software Engineer",
+  description = "CS @ Cornell — AWS, full-stack, and ML/AI engineering.",
+} = Astro.props;
+
+const siteUrl = "https://kylechu.vercel.app";
+const ogImage = `${siteUrl}/profile.png`;
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: personalInfo.name,
+  url: siteUrl,
+  jobTitle: "Software Engineer",
+  email: `mailto:${personalInfo.email}`,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: personalInfo.location,
+  },
+  sameAs: [personalInfo.github, personalInfo.linkedin],
+};
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="google-site-verification" content="hIrCikG7Uj0CE-AEpjb4eHXmZvZL-sUdJCnoSWIrwg4" />
     <meta name="description" content={description} />
     <title>{title}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={siteUrl} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <link rel="canonical" href={siteUrl} />
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} is:inline />
   </head>
   <body
     class="min-h-screen bg-background font-sans antialiased selection:bg-purple-500/20 selection:text-purple-500"

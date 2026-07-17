@@ -1,6 +1,6 @@
 import { personalInfo } from "@/lib/data";
 import { motion } from "framer-motion";
-import { Code, Github, Linkedin, Mail, Instagram, Facebook } from "lucide-react";
+import { Code, Github, Linkedin, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -68,26 +68,6 @@ export default function Footer() {
               whileTap={{ scale: 0.95 }}
             >
               <Linkedin className="w-6 h-6" />
-            </motion.a>
-            <motion.a
-              href={personalInfo.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Instagram className="w-6 h-6" />
-            </motion.a>
-            <motion.a
-              href={personalInfo.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Facebook className="w-6 h-6" />
             </motion.a>
           </motion.div>
 
