@@ -226,10 +226,10 @@ export const coursework = [
 ];
 export const skills = {
   coreLanguages: [
-    "JavaScript",
-    "TypeScript",
     "Python",
     "Kotlin",
+    "JavaScript",
+    "TypeScript",
     "Java",
     "SQL",
     "HTML/CSS",
