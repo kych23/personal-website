@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /Kyle_Chu_Resume.pdf
+Disallow: /archived_resumes/
 
 Sitemap: https://kyle-chu.vercel.app/sitemap-index.xml

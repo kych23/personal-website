@@ -2,7 +2,6 @@ export const personalInfo = {
   name: "Kyle Chu",
   location: "Williston Park, NY",
   email: "kyleghchu@gmail.com",
-  phone: "(917) 656-9383",
   github: "https://github.com/kych23",
   linkedin: "https://www.linkedin.com/in/kych2204/",
   // instagram: "https://www.instagram.com/kych2204/",
